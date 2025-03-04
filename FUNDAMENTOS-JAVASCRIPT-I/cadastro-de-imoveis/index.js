@@ -27,7 +27,7 @@ do {
                         "Garagem: " + bulding[i].garagem + "\n" +
                         "\n";
                 }
-                alert("Imóveis cadastrados: " + buildings);
+                alert("Imóveis cadastrados: \n " + buildings);
                 break;
             }
         }
