@@ -4,7 +4,7 @@ function calcularMedia(a,b){
 }
 
 const resultado = calcularMedia(10, 20)
-console.log(resultado)
+// console.log(resultado)
 
 function criarProduto(nome, preco){
     const produto = {
@@ -16,4 +16,13 @@ function criarProduto(nome, preco){
 }
 
 const notebook = criarProduto('Notebook Intel Core i3 8gb', 2500)
-console.log(notebook)
+// console.log(notebook)
+
+function areaRetangular(base,altura){
+   return  base * altura
+}
+
+function areaQuadrada(lado){
+    return areaRetangular(lado,lado)
+}
+console.log(areaQuadrada(9))
