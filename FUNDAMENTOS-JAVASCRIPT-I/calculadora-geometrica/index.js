@@ -27,6 +27,40 @@ do {
         "5: Circulo\n" +
         "6: Encerrar\n"))
 
-    switch (opcao) {}
+    switch (opcao) {
+        case 1: {
+            const base = parseFloat(prompt("Informe a base do triângulo: "));
+            const altura = parseFloat(prompt("Informe a altura do triângulo: "));
+            alert("A area do triângulo é: " + areaDoTriangulo(base, altura));
+            break;
+        }
+        case 2: {
+            const base = parseFloat(prompt("Informe a base do retângulo: "));
+            const altura = parseFloat(prompt("Informe a altura do retângulo: "));
+            alert("A area do retângulo é: " + areaDoRetagun(base, altura));
+            break;
+        }
+        case 3: {
+            const lado = parseFloat(prompt("Informe o lado do quadrado: "));
+            alert("A area do quadrado é: " + areaDoQuadrado(lado));
+            break;
+        }
+        case 4: {
+            const baseMaior = parseFloat(prompt("Informe a base maior do trapezio: "));
+            const baseMenor = parseFloat(prompt("Informe a base menor do trapezio: "));
+            const altura = parseFloat(prompt("Informe a altura do trapezio: "));
+            alert("A area do trapezio é: " + areaDoTrapezio(baseMaior, baseMenor, altura));
+            break;
+        }
+        case 5: {
+            const raio = parseFloat(prompt("Informe o raio do circulo: "));
+            alert("A area do circulo é: " + areaDoCirculo(raio));
+            break;
+        }
+        case 6: {
+            alert("Encerrando o programa ...");
+            
+        }
+    }
 
     } while (opcao != 6);
