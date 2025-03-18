@@ -1,66 +1,85 @@
 
-function areaDoTriangulo(base, altura) {
-    return base * altura / 2
+function areaDoTriangulo() {
+    const base = parseFloat(prompt("Informe a base do triângulo: "));
+    const altura = parseFloat(prompt("Informe a altura do triângulo: "));
+    return (base * altura) / 2
 }
 
-function areaDoRetagun(base, altura) {
+
+function areaDoRetagun() {
+    const base = parseFloat(prompt("Informe a base do retângulo: "));
+    const altura = parseFloat(prompt("Informe a altura do retângulo: "));
     return base * altura
 }
-function areaDoQuadrado(lado) {
+function areaDoQuadrado() {
+    const lado = parseFloat(prompt("Informe o lado do quadrado: "));
     return lado * lado
 }
-function areaDoTrapezio(baseMaior, baseMenor, altura) {
+function areaDoTrapezio() {
+    const baseMaior = parseFloat(prompt("Informe a base maior do trapezio: "));
+    const baseMenor = parseFloat(prompt("Informe a base menor do trapezio: "));
+    const altura = parseFloat(prompt("Informe a altura do trapezio: "));
     return (baseMaior + baseMenor) * altura / 2
 }
 
-function areaDoCirculo(raio) {
+
+function areaDoCirculo() {
+
+    const raio = parseFloat(prompt("Informe o raio do circulo: "));
     return 3.14 * raio * raio
 }
 
-
-do {
-    let opcao = parseFloat(prompt("Escolha uma opção\n" +
-        "1: Triângulo\n" +
-        "2: Retângulo\n" +
-        "3: Quadrado\n" +
-        "4: Trapezio\n" +
-        "5: Circulo\n" +
+function exibirMenu() {
+    return parseFloat(prompt("Calculadora Geométrica\n" +
+        "1:Calcular área do Triângulo\n" +
+        "2:Calcular área do Retângulo\n" +
+        "3:Calcular área do Quadrado\n" +
+        "4:Calcular área do Trapezio\n" +
+        "5:Calcular área do Circulo\n" +
         "6: Encerrar\n"))
 
-    switch (opcao) {
-        case 1: {
-            const base = parseFloat(prompt("Informe a base do triângulo: "));
-            const altura = parseFloat(prompt("Informe a altura do triângulo: "));
-            alert("A area do triângulo é: " + areaDoTriangulo(base, altura));
-            break;
-        }
-        case 2: {
-            const base = parseFloat(prompt("Informe a base do retângulo: "));
-            const altura = parseFloat(prompt("Informe a altura do retângulo: "));
-            alert("A area do retângulo é: " + areaDoRetagun(base, altura));
-            break;
-        }
-        case 3: {
-            const lado = parseFloat(prompt("Informe o lado do quadrado: "));
-            alert("A area do quadrado é: " + areaDoQuadrado(lado));
-            break;
-        }
-        case 4: {
-            const baseMaior = parseFloat(prompt("Informe a base maior do trapezio: "));
-            const baseMenor = parseFloat(prompt("Informe a base menor do trapezio: "));
-            const altura = parseFloat(prompt("Informe a altura do trapezio: "));
-            alert("A area do trapezio é: " + areaDoTrapezio(baseMaior, baseMenor, altura));
-            break;
-        }
-        case 5: {
-            const raio = parseFloat(prompt("Informe o raio do circulo: "));
-            alert("A area do circulo é: " + areaDoCirculo(raio));
-            break;
-        }
-        case 6: {
-            alert("Encerrando o programa ...");
-            
-        }
-    }
+}
 
-    } while (opcao != 6);
+function executar() {
+    let opcao = ''
+
+    do {
+        opcao = exibirMenu();
+        let resultado
+        switch (opcao) {
+            case 1: {
+                resultado = areaDoTriangulo();
+                alert("A area do triângulo é: " + resultado);
+                break;
+            }
+            case 2: {
+                resultado = areaDoRetagun();
+                alert("A area do retângulo é: " + resultado);
+                break;
+            }
+            case 3: {
+                resultado = areaDoQuadrado();
+                alert("A area do quadrado é: " + resultado);
+                break;
+            }
+            case 4: {
+                resultado = areaDoTrapezio();
+                alert("A area do trapezio é: " + resultado);
+                break;
+            }
+            case 5: {
+                resultado = areaDoCirculo();
+                alert("A area do circulo é: " + resultado);
+                break;
+            }
+            case 6: {
+                alert("Encerrando o programa ...");
+
+            }
+        }
+
+    } while (opcao != 6)
+}
+
+
+executar();
