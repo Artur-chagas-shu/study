@@ -57,3 +57,16 @@ return acumulador
 },{})
 
 console.log(racas)
+
+
+//Sort
+
+
+const personagensOrdenados =personagens.slice().sort(function(a, b) {
+    return  a.nivel - b.nivel
+})
+
+console.log(personagens)
+
+console.log(personagensOrdenados)
+
