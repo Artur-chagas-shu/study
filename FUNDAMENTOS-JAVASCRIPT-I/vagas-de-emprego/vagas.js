@@ -27,10 +27,6 @@ function criarVaga() {
             alert("Encerrando o programa...")
         }
     }
-
-
-
-
 }
 
 
@@ -41,11 +37,18 @@ function criarVaga() {
 
 
 
-function visualizarUmaVaga() {
+function visualizarUmaVaga(indice = parseInt(prompt("Informe o indice da vaga: "))) {
 
-    let indice = prompt("Informe o indice da vaga: ")
 
-    console.log(vagas[indice - 1])
+    let nomes = []
+    vagas[indice - 1].candidatos.forEach(candidato => {
+        nomes.push(candidato.nome + " ")
+    })
+
+    alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
+
+    )
+
 
 }
 
@@ -53,9 +56,14 @@ function escreverCandidatoNaVaga(vagas) {
     const candidato = {
         nome: prompt("Informe o nome do candidato: "),
     }
-    const indice = prompt("Informe o indice da vaga: ")
+    const indice = parseInt(prompt("Informe o indice da vaga: "))
+    const continuar = prompt( 'Deseja escrever um novo candidato na vaga ?'+ visualizarUmaVaga(indice) + '\n 1: Sim \n 2: Nao')
+    if (continuar == 1) {
+        vagas[indice - 1].candidatos.push(candidato);
+    } else {
+        alert("Encerrando o programa...")
+    }
 
-    vagas[indice - 1].candidatos.push(candidato);
 }
 
 
