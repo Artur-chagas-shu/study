@@ -57,7 +57,7 @@ function escreverCandidatoNaVaga(vagas) {
         nome: prompt("Informe o nome do candidato: "),
     }
     const indice = parseInt(prompt("Informe o indice da vaga: "))
-    const continuar = prompt( 'Deseja escrever um novo candidato na vaga ?'+ visualizarUmaVaga(indice) + '\n 1: Sim \n 2: Nao')
+    const continuar = prompt(visualizarUmaVaga(indice) + ' Deseja escrever um novo candidato na vaga ?' +'\n 1: Sim \n 2: Nao')
     if (continuar == 1) {
         vagas[indice - 1].candidatos.push(candidato);
     } else {
