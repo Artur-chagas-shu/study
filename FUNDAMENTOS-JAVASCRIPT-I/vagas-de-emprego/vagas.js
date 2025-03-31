@@ -57,7 +57,16 @@ function escreverCandidatoNaVaga(vagas) {
         nome: prompt("Informe o nome do candidato: "),
     }
     const indice = parseInt(prompt("Informe o indice da vaga: "))
-    const continuar = prompt(visualizarUmaVaga(indice) + ' Deseja escrever um novo candidato na vaga ?' +'\n 1: Sim \n 2: Nao')
+    let nomes = []
+    vagas[indice - 1].candidatos.forEach(candidato => {
+        nomes.push(candidato.nome + " ")
+    })
+
+    alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
+
+    )
+
+    const continuar = prompt(' Deseja escrever um novo candidato na vaga ?' + '\n 1: Sim \n 2: Nao')
     if (continuar == 1) {
         vagas[indice - 1].candidatos.push(candidato);
     } else {
@@ -69,7 +78,23 @@ function escreverCandidatoNaVaga(vagas) {
 
 function excluirVaga() {
     indice = prompt("Informe o indice da vaga: ")
-    vagas.splice(indice - 1, 1)
+    let nomes = []
+    vagas[indice - 1].candidatos.forEach(candidato => {
+        nomes.push(candidato.nome + " ")
+    })
+
+    alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
+
+    )
+
+    const continuar = prompt(' Deseja excluir a vaga ?' + '\n 1: Sim \n 2: Nao')
+    if (continuar == 1) {
+        vagas.splice(indice - 1, 1)
+        alert("Vaga excluida com sucesso !")
+    } else {
+        alert("Encerrando o programa...")
+    }
+
 }
 function menu() {
 
@@ -79,26 +104,26 @@ function menu() {
     do {
 
         switch (prompt("Escolha uma opção: \n " +
-            "1: Listar vagas disponiveis\n" +
-            "2: Criar uma nova vaga\n" +
-            "3: Visualizar uma vaga\n" +
-            "4: Escrever candidato em uma nova vaga\n" +
-            "5: Excluir uma vaga\n" +
-            "6: Encerrar\n"
+            "1: Listar vagas disponiveis.\n" +
+            "2: Criar uma nova vaga.\n" +
+            "3: Visualizar uma vaga.\n" +
+            "4: Inscrever candidato em uma vaga\n" +
+            "5: Excluir uma vaga.\n" +
+            "6: Encerrar.\n"
         )) {
-            case "1": alert("Voce escolheu a opção 1... Listando vagas");
+            case "1": alert("Listando vagas ...");
                 listarVagas(vagas);
                 break;
-            case "2": alert("Voce escolheu a opção 2 Criar uma vagas");
+            case "2": alert("Forneça as informações da vaga");
                 criarVaga();
                 break;
-            case "3": alert("Voce escolheu a opção 3 Visualizar uma vaga");
+            case "3": alert("Visualizando uma vaga");
                 visualizarUmaVaga();
                 break;
-            case "4": alert("Voce escolheu a opção 4 Inscrever candidato em uma vaga");
+            case "4": alert("Inscreva um candidato na vaga");
                 escreverCandidatoNaVaga(vagas);
                 break;
-            case "5": alert("Voce escolheu a opção 5 Excluir uma vaga");
+            case "5": alert("Excluir Vaga.");
                 excluirVaga();
                 break;
             case "6": alert("Encerrando o programa ...")
