@@ -52,7 +52,7 @@ function visualizarUmaVaga(indice = parseInt(prompt("Informe o indice da vaga: "
 
 }
 
-function escreverCandidatoNaVaga(vagas) {
+function inscreverCandidato(vagas) {
     const candidato = {
         nome: prompt("Informe o nome do candidato: "),
     }
@@ -121,7 +121,7 @@ function menu() {
                 visualizarUmaVaga();
                 break;
             case "4": alert("Inscreva um candidato na vaga");
-                escreverCandidatoNaVaga(vagas);
+                inscreverCandidato(vagas);
                 break;
             case "5": alert("Excluir Vaga.");
                 excluirVaga();
