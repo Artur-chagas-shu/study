@@ -34,16 +34,17 @@ function criarVaga() {
 function visualizarUmaVaga(indice = parseInt(prompt("Informe o indice da vaga: "))) {
     if (indice >= vagas.length || indice < 0) {
         alert("Indice invalido")
-    } else {
-        let nomes = []
-        vagas[indice - 1].candidatos.forEach(candidato => {
-            nomes.push(candidato.nome + " ")
-        })
-
-        alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
-
-        )
+        return
     }
+    let nomes = []
+    vagas[indice - 1].candidatos.forEach(candidato => {
+        nomes.push(candidato.nome + " ")
+    })
+
+    alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
+
+    )
+
 
 
 
