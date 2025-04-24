@@ -14,6 +14,7 @@ function criarVaga() {
         dataLimite: prompt("Informe a data limite da vaga: "),
         candidatos: []
     }
+
     let continuar = prompt("Deseja criar a vaga ? \n 1: Sim \n 2: Não " + "\n Titulo:  - " + vaga.titulo + "\n Descricao: - " + vaga.descricao + "\n  Data Limite: - " + vaga.dataLimite + "\n Numero de candidatos - " + vaga.candidatos.length)
 
     if (continuar == 1) {
@@ -30,24 +31,21 @@ function criarVaga() {
 }
 
 
-
-
-
-
-
-
-
 function visualizarUmaVaga(indice = parseInt(prompt("Informe o indice da vaga: "))) {
+    if (indice >= vagas.length || indice < 0) {
+        alert("Indice invalido")
+    } else {
+        let nomes = []
+        vagas[indice - 1].candidatos.forEach(candidato => {
+            nomes.push(candidato.nome + " ")
+        })
+
+        alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
+
+        )
+    }
 
 
-    let nomes = []
-    vagas[indice - 1].candidatos.forEach(candidato => {
-        nomes.push(candidato.nome + " ")
-    })
-
-    alert('Número da vaga:' + " - " + indice + "\n Titulo:  - " + vagas[indice - 1].titulo + "\n Descrição: - " + vagas[indice - 1].descricao + "\n  Data Limite: - " + vagas[indice - 1].dataLimite + "\n Numero de candidatos - " + vagas[indice - 1].candidatos.length + "\n Candidatos: " + nomes
-
-    )
 
 
 }
@@ -139,6 +137,3 @@ function menu() {
 }
 
 menu()
-
-
-
