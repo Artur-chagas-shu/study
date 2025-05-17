@@ -15,3 +15,6 @@ const arrowSum = (a,b) => {
 }
 
 console.log(`Soma arrow: ${arrowSum(2,2)}`)
+const subtract = (a,b) => a - b
+
+console.log(`Subtração: ${subtract(2,2)}`)
