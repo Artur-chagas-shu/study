@@ -9,3 +9,9 @@ const anonymousSum = function (a,b){
 }
 
 console.log(`Soma anõnima: ${anonymousSum(2,2)}`)   
+
+const arrowSum = (a,b) => {
+    return a + b
+}
+
+console.log(`Soma arrow: ${arrowSum(2,2)}`)
