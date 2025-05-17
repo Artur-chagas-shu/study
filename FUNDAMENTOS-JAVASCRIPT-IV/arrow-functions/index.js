@@ -18,3 +18,7 @@ console.log(`Soma arrow: ${arrowSum(2,2)}`)
 const subtract = (a,b) => a - b
 
 console.log(`Subtração: ${subtract(2,2)}`)
+
+const double = n => `O dobro de ${n} é ${n * 2}`
+
+console.log(double(21))
