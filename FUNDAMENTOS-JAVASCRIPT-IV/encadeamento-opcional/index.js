@@ -16,4 +16,7 @@ const user = {
   }
 }
 
-console.log(user.friends[0].phone.ddd)
+// console.log(user.friends[0].phone.ddd)
+console.log(user?.friends[0]?.phone?.ddd)
+
+console.log(user.brothers?.[5].name)
