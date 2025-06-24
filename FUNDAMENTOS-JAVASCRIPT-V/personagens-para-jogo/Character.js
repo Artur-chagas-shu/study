@@ -9,8 +9,7 @@ export class Character  {
         const dmg = this.atk - target.def
         target.life -= dmg
         console.log(this.name + ' causou ' + dmg + ' de dano em ' + target.name)
-
-        
+  
     }
 }
 
