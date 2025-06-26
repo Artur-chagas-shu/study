@@ -23,3 +23,21 @@ class Aircraft extends Vehicle {
         )
     }
 }
+
+const delorean = new Car ()
+const blackPearl = new Ship()
+const epoch = new Aircraft()
+
+/*delorean.move()
+blackPearl.move()
+epoch.move(100)*/
+
+
+function start (vehicle) {
+    console.log('Iniciando um veiculo...')
+    vehicle.move()
+}
+
+start(delorean)
+start(blackPearl)
+start(epoch)

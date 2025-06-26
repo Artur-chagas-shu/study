@@ -1,8 +1,8 @@
 const Author = require('./Author.js')
+
 const artur = new Author('Artur')
 
-
-const post = artur.createPost (artur ,'A vida dos gatos', 'Como gatos podem ser tao bonitos, post para descutirmos sobre isso')
+const post = artur.createPost (' A vida dos gatos,','Como gatos podem ser tao bonitos, post para descutirmos sobre isso')
 
 post.addComment ('Artur', 'Gatos sao muito bonitos')
 
