@@ -13,12 +13,11 @@
 
 
  function imcTable(weight, height){
-    // This log shows that the calculation has been initiated.
+
     console.log('Calculando IMC...')
     imcCalculator(weight, height).then((imcResult) => {
         console.log(`O seu IMC é ${imcResult.toFixed(2)}`)
-        // FIX: The conditional logic must use the resolved value (imcResult), not the Promise object.
-        // The conditions have also been simplified for better readability.
+      
         if(imcResult < 18.5 ){
             console.log('Status: Magreza')
         } else if(imcResult < 25){
@@ -32,7 +31,7 @@
         }
         
     }).catch((err) => {
-        // Using console.error is a better practice for logging errors.
+        
         console.error(err)
     });
     console.log('working...')
