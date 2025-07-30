@@ -20,7 +20,7 @@ function getAge(birthday) {
     })
 }
 
-getAge('1999-09-02').then((age)=>{
+getAge('2009-09-02').then((age)=>{
     return checkAge(age)
 }).then( (isOver18)=> {
     if (isOver18) {
@@ -29,4 +29,7 @@ getAge('1999-09-02').then((age)=>{
             console.log('You are not over 18')
     }
 
+})
+.catch((error)=>{
+    console.log(error.message)
 })
