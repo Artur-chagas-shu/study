@@ -1,7 +1,7 @@
  function imcCalculator(weight,height){
     return new Promise((resolve, reject) => { 
         if(typeof weight !== 'number' || typeof height !== 'number'){
-            reject(new Error('weight and height must be numbers'));
+            reject('weight and height must be numbers');
         }
         const imc = weight / (height * height);
          resolve(imc);
@@ -30,3 +30,6 @@
  
 
 imcTable(107, 1.65)
+imcTable(48, 1.70)
+imcTable(71, 'texto')
+imcTable(120, 1.80)
