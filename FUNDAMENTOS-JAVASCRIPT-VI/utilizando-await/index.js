@@ -14,8 +14,14 @@ async function asyncSum(a, b) {
 //}
 
 async function execute(){
-    const result = await asyncSum(50,33)
-    console.log(result)
+
+    try {
+        const result = await asyncSum(50,null)
+        console.log(result)  
+    } catch (error) {
+        console.log(error)    
+    }
+    
 }
 
 execute()
