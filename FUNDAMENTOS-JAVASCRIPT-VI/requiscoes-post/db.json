@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Artur"
+    },
+    {
+      "id": "2",
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Artur"
+    },
+    {
+      "id": "be35",
+      "title": "meu artigo",
+      "author": "artur",
+      "content": "123451"
+    },
+    {
+      "id": "4885",
+      "title": "Testando",
+      "author": "artur",
+      "content": "Testando request"
+    }
+  ]
+}
