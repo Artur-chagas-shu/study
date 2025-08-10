@@ -1,12 +1,14 @@
 {
-    "transactions": [
-
-        {
-            "id": 1,
-            "name": "Salario",
-            "amount":100
-        }
-    ]
-
-
+  "transactions": [
+    {
+      "name": "Salário",
+      "amount": 3500,
+      "id": "3"
+    },
+    {
+      "id": "1e1d",
+      "name": "lanche",
+      "amount": -20
+    }
+  ]
 }
