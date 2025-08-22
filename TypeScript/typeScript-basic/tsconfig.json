@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "typeScript-basic/dist",
-        "target": "es2015"
+        "target": "es2015",
+        "module": "commonjs",
     }
 }
