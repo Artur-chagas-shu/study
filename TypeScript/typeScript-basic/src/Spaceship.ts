@@ -1,4 +1,4 @@
-class Spaceship {
+/* class Spaceship {
   private _name: string
   protected captain: string
   protected speed: number
@@ -43,4 +43,4 @@ let ship = new Spaceship('USS Enterprise', 'James T. Kirk')
 
 
 ship.accelerate(50, 10)
-console.log(ship.name)
+console.log(ship.name) */
